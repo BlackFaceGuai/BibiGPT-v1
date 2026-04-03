@@ -28,7 +28,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const userConfig = {
     userKey: query.userKey,
     baseUrl: query.baseUrl,
-    shouldShowTimestamp: query.showTimestamp === 'true' || query.showTimestamp === true,
+    shouldShowTimestamp: query.showTimestamp === 'true',
   }
 
   try {

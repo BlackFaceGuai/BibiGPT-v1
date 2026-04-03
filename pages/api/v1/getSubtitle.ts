@@ -22,7 +22,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   const videoConfig = buildVideoConfigFromQuery(parsed, req.query)
-  const shouldShowTimestamp = req.query.showTimestamp === 'true' || req.query.showTimestamp === true
+  const shouldShowTimestamp = req.query.showTimestamp === 'true'
 
   try {
     const { title, subtitlesArray, descriptionText } = await fetchSubtitle(videoConfig, shouldShowTimestamp)
